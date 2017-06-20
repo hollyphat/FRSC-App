@@ -32,7 +32,7 @@ myApp.onPageInit('about', function (page) {
             e.preventDefault();
             var user = $$(".user").val();
             //var url = 'http://localhost/projects/frsc/save2.php';
-            var url = 'http://frsc.onlinemedia.com.ng/save2.php';
+            var url = 'http://osunfrsc.org.ng/save2.php';
 
             //console.log(src);            
             //myApp.alert(user);
