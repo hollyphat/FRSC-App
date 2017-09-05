@@ -171,9 +171,16 @@ myApp.onPageInit('about', function (page) {
                 error: function(e){
                     console.log(e);
                     myApp.alert("Network error, please try again!");
-                    $$(".result").addClass('hide');
-                    $$(".my-result").html("");
-                    $$(".output").addClass('hide');
+                    $$("#intro").html('');
+                    $$("#info").html('');
+                    $$("#before_use").html('');
+                    $$("#how_to_use").html('');
+                    $$("#miss_a_dose").html('');
+                    $$("#over_dose").html('');
+                    $$("#avoid").html('');
+                    $$("#side_effect").html('');
+                    $$("#adol_dosage").html('');
+                    $$("#adult_dosage").html('');
                 },
                 timeout: 60000
             });
