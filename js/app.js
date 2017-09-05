@@ -7,7 +7,7 @@ var myApp = new Framework7({
 
 // Export selectors engine
 var $$ = Dom7;
-var url = 'http://freelance.in/drug/api.php';
+//var url = 'http://freelance.in/drug/api.php';
 var url = 'http://app.onlinemedia.com.ng/pharmarcy/api.php';
 
 // Add view
