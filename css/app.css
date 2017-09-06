@@ -65,3 +65,10 @@ p{
 	padding: 10px;
 	color: #fff;
 }
+
+
+.app-name{
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+}
