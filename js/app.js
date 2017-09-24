@@ -1,13 +1,13 @@
 // Initialize your app
 var myApp = new Framework7({
-        modalTitle: 'Online Pharmarcy',
+        modalTitle: 'Mobile Pharmarcy',
         material: true,
         pushState : true
     });
 
 // Export selectors engine
 var $$ = Dom7;
-//var url = 'http://freelance.in/drug/api.php';
+//var url = 'http://freelance.in/drug/server/api.php';
 var url = 'http://app.onlinemedia.com.ng/pharmarcy/api.php';
 
 // Add view
