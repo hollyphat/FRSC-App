@@ -24,6 +24,9 @@
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
 
+    <icon src="img/icon.png" />
+    <splash src="img/splash.png" />
+
     <platform name="android">
         <icon density="ldpi" src="img/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="img/icon/drawable-mdpi-icon.png" />
