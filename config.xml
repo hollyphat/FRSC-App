@@ -23,6 +23,7 @@
     <preference name="DisallowOverscroll"         value="true" />
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
+    <preference name="SplashScreenDelay" value="3000" />
 
     <icon src="img/icon.png" />
     <splash src="img/splash.png" />
@@ -54,6 +55,7 @@
     <!-- Plugins -->
     <!-- Core plugins -->    
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-splashscreen" />
 
     <!-- Define app icon and splashscreen for each platform. -->
     <icon src="icon.png" />
