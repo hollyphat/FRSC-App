@@ -24,11 +24,12 @@
     <!-- android: MIN SDK version supported on the target device. MAX version is blank by default. -->
     <preference name="android-minSdkVersion"      value="14" />
     <preference name="SplashScreenDelay" value="6000" />
+    <preference name = "SplashMaintainAspectRatio" value = "true" />
 
     <icon src="img/icon.png" />
     <splash src="img/splash.png" />
 
-    <platform name="android">
+    <!-- <platform name="android">
         <icon density="ldpi" src="img/icon/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="img/icon/drawable-mdpi-icon.png" />
         <icon density="hdpi" src="img/icon/drawable-hdpi-icon.png" />
@@ -47,7 +48,7 @@
         <splash density="port-xhdpi" src="img/screens/android/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="img/screens/android/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="img/screens/android/drawable-port-xxxhdpi-screen.png" />
-    </platform>
+    </platform> -->
 
     <!-- Define a specific version of PhoneGap to build into your app. -->
     <!-- <preference name="phonegap-version"       value="cli-6.0.0" /> -->
