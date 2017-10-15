@@ -16,12 +16,17 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
-// Callbacks to run specific code for specific pages, for example for About page:
+
+
+myApp.onPageInit('splash', function (page) {
+    //alert("Hey");
+   //check if we have ft
+});
+
+
 myApp.onPageInit('about', function (page) {
-    // run createContentPage func after link was clicked
-    $$('.create-page').on('click', function () {
-        createContentPage();
-    });
+   
+    
 });
 
 
@@ -117,6 +122,22 @@ myApp.onPageInit('about', function (page) {
         });
     });
 
+    myApp.onPageInit('offline',function(page){
+        myDB.transaction(function(transaction) {
+          transaction.executeSql('SELECT id,drug_name FROM drug_tb', [], function (tx, results) {
+               var len = results.rows.length, i;
+               //$$("#rowCount").html(len);
+               var c = "";
+               for (i = 0; i < len; i++){
+                c = "<a href='view_2.html' data-drug='"+results.row.item(i).drug_name+"' data-id='"+results.row.item(i).id+"' class='item-link item-content clicks'>";
+                c += "<div class='item-inner'>";
+                c += "<div class='item-title'>"+results.row.item(i).drug_name+"</div></div></a></li>";
+                  $$("#results").append(c);
+               }
+            }, null);
+          });
+    });
+
 
      myApp.onPageInit('views',function(page){
         var d = sessionStorage.getItem("drug_name");
@@ -184,4 +205,37 @@ myApp.onPageInit('about', function (page) {
                 },
                 timeout: 60000
             });
+
+
+            $$("#add-drug").on('submit',function(e){
+
+                    e.preventDefault();
+                    var drug_name = sessionStorage.getItem("drug_name");
+                    var drug_id = sessionStorage.getItem("drug_id");
+                    var into = $$("#intro").html();
+                    var info = $$("#info").html();
+                    var before_use = $$("#before_use").html();
+                    var how_to_use =  $$("#how_to_use").html();
+                    var miss_a_dose =  $$("#miss_a_dose").html();
+                    var over_dose =  $$("#over_dose").html();
+                    var avoid =  $$("#avoid").html();
+                    var side_effect =  $$("#side_effect").html();
+                    var adol_dosage =  $$("#adol_dosage").html();
+                    var adult_dosage =  $$("#adult_dosage").html();
+                    
+                    myDB.transaction(function(transaction) {
+                        var executeQuery = "INSERT INTO drug_tb (drug_name, drug_id, intro, info, before_use, how_to_use, miss_a_dose, over_dose, avoid, side_effect, adol_dosage, adult_dosage) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)";             
+                        transaction.executeSql(executeQuery, [drug_name,drug_id,intro, info, before_use, how_to_use, miss_a_dose, over_dose, avoid, side_effect, adol_dosage, adult_dosage]
+                            , function(tx, result) {
+                                   alert('Inserted');
+                                },
+                                function(error){
+                                    alert('Error occurred'); 
+                            });
+                    });
+
+
+            });
+
+            //myApp.onPageInit('search',function(page){
      });

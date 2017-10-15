@@ -6,10 +6,10 @@
         id        = "ng.com.onlinemedia.mobilepharmarcy"
         version   = "1.0.2">
 
-    <name>Mobile Pharmacy</name>
+    <name>Mobile Pharmacist</name>
 
     <description>
-        Mobile Pharmacy Application
+        Mobile Pharmacist Application
     </description>
 
     <author href="http://onlinemedia.com.ng" email="admin@onlinemedia.com.ng">
@@ -43,6 +43,7 @@
     <!-- Plugins -->
     <!-- Core plugins -->    
     <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
+    <plugin name="cordova-sqlite-storage" />
 
 
     <!-- Define app icon and splashscreen for each platform. -->
