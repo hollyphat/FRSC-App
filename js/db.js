@@ -2,8 +2,8 @@ var myDB;
 //Open Database Connection
 document.addEventListener("deviceready",onDeviceReady,false);
 function onDeviceReady(){
-	
-	var myDB = window.sqlitePlugin.openDatabase({
+	//cordova-plugin-sqlite.SQLitePlugin
+	var myDB = window.SQLitePlugin.openDatabase({
 		name: "mPharmarcy.db", 
 		location: 'default'
 	});
