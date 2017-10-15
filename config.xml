@@ -43,7 +43,7 @@
     <!-- Plugins -->
     <!-- Core plugins -->    
     <plugin name="cordova-plugin-whitelist" spec="1.2.2" />
-    <plugin name="cordova-sqlite-storage" />
+    <plugin name="cordova-plugin-sqlite" />
 
 
     <!-- Define app icon and splashscreen for each platform. -->
