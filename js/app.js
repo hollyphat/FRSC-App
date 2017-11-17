@@ -122,21 +122,7 @@ myApp.onPageInit('about', function (page) {
         });
     });
 
-    myApp.onPageInit('offline',function(page){
-        myDB.transaction(function(transaction) {
-          transaction.executeSql('SELECT id,drug_name FROM drug_tb', [], function (tx, results) {
-               var len = results.rows.length, i;
-               //$$("#rowCount").html(len);
-               var c = "";
-               for (i = 0; i < len; i++){
-                c = "<a href='view_2.html' data-drug='"+results.row.item(i).drug_name+"' data-id='"+results.row.item(i).id+"' class='item-link item-content clicks'>";
-                c += "<div class='item-inner'>";
-                c += "<div class='item-title'>"+results.row.item(i).drug_name+"</div></div></a></li>";
-                  $$("#results").append(c);
-               }
-            }, null);
-          });
-    });
+
 
 
      myApp.onPageInit('views',function(page){
@@ -162,7 +148,7 @@ myApp.onPageInit('about', function (page) {
                     //var info = parseJson(data);
                     var info = JSON.parse(data);
                     //console.log(info);
-
+                    $$("#price").html(info.price);
                     $$("#intro").html(info.intro);
                     $$("#info").html(info.info);
                     $$("#before_use").html(info.before_use);
