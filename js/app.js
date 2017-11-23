@@ -1,6 +1,6 @@
 // Initialize your app
 var myApp = new Framework7({
-        modalTitle: 'Mobile Pharmarcy',
+        modalTitle: 'Mobile Pharmarcist Assistant',
         material: true,
         pushState : true
     });
