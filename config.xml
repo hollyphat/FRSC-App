@@ -6,10 +6,10 @@
         id        = "ng.com.onlinemedia.mobilepharmarcy"
         version   = "1.0.2">
 
-    <name>Mobile Pharmacist</name>
+    <name>Mobile Pharmaceutical Information System</name>
 
     <description>
-        Mobile Pharmacist Application
+        Mobile Pharmaceutical Information System Mobile Application Application
     </description>
 
     <author href="http://onlinemedia.com.ng" email="admin@onlinemedia.com.ng">
