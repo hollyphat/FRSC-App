@@ -123,6 +123,61 @@ myApp.onPageInit('about', function (page) {
     });
 
 
+    myApp.onPageInit('all',function(page){
+        $$(".result").addClass('hide');
+        $$(".my-result").html("");
+        $$(".output").addClass('hide');
+
+        $$.ajax({
+            url: url,
+            data: {
+                'act': 'search',
+            },
+            //dataType: 'json',
+            type: 'GET',
+            crossDomain : true,
+            cache: false,
+            success: function(data) {
+                //console.log(data);
+
+
+
+                $$(".result").addClass('hide');
+                // var d = data;
+
+                // for(var i = 0; i < d.length; i++){
+                //     console.log(d[i]);
+                // }
+                $$(".my-result").html(data);
+                $$(".output").removeClass('hide');
+
+                $$("#search-form").addClass('hide');
+                //return;
+            },
+            error: function(e){
+                console.log(e);
+                myApp.alert("Network error, please try again!");
+                $$(".result").addClass('hide');
+                $$(".my-result").html("");
+                $$(".output").addClass('hide');
+            },
+            timeout: 60000
+        });
+
+    $$("html").on('click', '.clicks', function(event) {
+
+        var d = $$(this).attr('data-drug');
+        var id = $$(this).attr('data-id');
+        //alert(d);
+        sessionStorage.setItem("drug_name",d);
+        sessionStorage.setItem("drug_id",id);
+        /* Act on the event */
+    });
+
+
+
+});
+
 
 
      myApp.onPageInit('views',function(page){
