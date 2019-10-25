@@ -124,14 +124,14 @@ myApp.onPageInit('about', function (page) {
 
 
     myApp.onPageInit('all',function(page){
-        $$(".result").addClass('hide');
+        //$$(".result").addClass('hide');
         $$(".my-result").html("");
-        $$(".output").addClass('hide');
+        //$$(".output").addClass('hide');
 
         $$.ajax({
             url: url,
             data: {
-                'act': 'search',
+                'act': 'all',
             },
             //dataType: 'json',
             type: 'GET',
